@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main>
+    <img src="images/logo.svg" alt="">
+    <div class="content">
+      <div class="data">
+        <h3>Bill</h3>
+        <input type="number" placeholder="0" name="" id="valor">
+        <h4>Select Tip %</h4>
+        <div class="tip">
+          <button class = "tipBtn" value="5" onclick="calTip(5)">5%</button>
+          <button class = "tipBtn" value="10" onclick="calTip(10)">10%</button>
+          <button class = "tipBtn" value="15" onclick="calTip(15)">15%</button>
+          <button class = "tipBtn" value="25" onclick="calTip(25)">25%</button>
+          <button class = "tipBtn" value="50" onclick="calTip(50)">50%</button>
+          <input class = "tipBtn"type="number" name="custom" onkeyup="customTip()" placeholder="Custom" id="custom">
+        </div>
+        <div class="separate">
+          <h4>Number of People </h4><span class=" cant">can`t be zero</span>
+        </div>
+        <input type="tel" maxlength="3" name="people" onkeyup="calc()" placeholder="0" class="people">
+      </div>
+      <div class="values">
+        <div class="tipAmount">
+          <h5>Tip Amount <br>
+            <span>
+              / person
+            </span>
+          </h5>
+          <div class="tipvalue">$0.00</div>
+        </div>
+        
+
+        <div class="total">
+          <h5>Total <br>
+            <span>
+              / person
+            </span>
+          </h5>
+          <div class="totalvalue">$0.00</div>
+        </div>
+       
+        <input type="button" id="reset" value="Reset">
+      </div>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
